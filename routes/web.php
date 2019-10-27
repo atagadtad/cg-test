@@ -12,7 +12,6 @@
 */
 
 Route::get('/', function () {
-
-    $user = DB::table('users')->get();
-    return $user;
+    $users = DB::table('users')->get();
+    return $users;
 });
