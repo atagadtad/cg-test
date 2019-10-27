@@ -12,5 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $user = DB::table('users')->get();
+    return $user;
 });
