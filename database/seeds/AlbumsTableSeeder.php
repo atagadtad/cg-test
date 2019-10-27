@@ -11,6 +11,12 @@ class AlbumsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('albums')->insert([
+            'title' => 'Nandhaka Pieris',
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'img' => 'img/landscape1.jpg',
+            'date' => '2015-05-01',
+            'featured' => false
+        ]);
     }
 }

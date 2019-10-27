@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    $users = DB::table('users')->get();
-    return $users;
-});
+// Route::get('/', function () {
+//     $users = DB::table('albums')->get();
+//     return $users;
+// });
+
+Route::view('/{path?}', 'app');
