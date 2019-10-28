@@ -1,21 +1,16 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import Gallery from './Gallery';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Gallery from './Gallery'
 
-export default class App extends Component {
-    render() {
-        return (
-            <BrowserRouter>
-            <Header />
-            <Switch>
-              <Route exact path='/' component={Gallery} />
-            </Switch>
-            </BrowserRouter>
-        );
-    }
+export default function App(props) {
+    return (
+        <main>
+            <Gallery />
+
+        </main>
+    )
 }
 
-if (document.getElementById('example')) {
-    ReactDOM.render(<App />, document.getElementById('app'));
-}
+
+ReactDOM.render(<App />, document.getElementById("app"));
