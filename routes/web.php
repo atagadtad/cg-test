@@ -11,16 +11,16 @@
 |
 */
 
-Route::get('/', function () {
+// Route::get('/', function () {
 
-    $user = App\User::find(1);
+//     $user = App\User::find(1);
 
 
-    $users = DB::table('users')
-    ->join('photos', 'photos.user_id', '=', 'users.id')
-    ->select('users.*', 'photos.*')
-    ->get();
-    return $user;
-});
+//     $users = DB::table('users')
+//     ->join('photos', 'photos.user_id', '=', 'users.id')
+//     ->select('users.*', 'photos.*')
+//     ->get();
+//     return $user;
+// });
 
-// Route::view('/{path?}', 'app');
+Route::view('/{path?}', 'app');

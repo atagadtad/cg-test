@@ -14,8 +14,9 @@ class UserController extends Controller
 
     public static function show($id)
     {
+        $user = User::find($id);
 
-        return $users->toJson();
+        return $user;
     }
 
 }
