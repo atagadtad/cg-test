@@ -12,6 +12,7 @@ class AlbumsTableSeeder extends Seeder
     public function run()
     {
         DB::table('albums')->insert([
+            'user_id' => 1,
             'title' => 'Nandhaka Pieris',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             'img' => 'img/landscape1.jpg',
@@ -20,6 +21,7 @@ class AlbumsTableSeeder extends Seeder
         ]);
 
         DB::table('albums')->insert([
+            'user_id' => 1,
             'title' => 'New West Calgary',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             'img' => 'img/landscape2.jpg',
@@ -28,6 +30,7 @@ class AlbumsTableSeeder extends Seeder
         ]);
 
         DB::table('albums')->insert([
+            'user_id' => 1,
             'title' => 'Australian Landscape',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             'img' => 'img/landscape3.jpg',
@@ -36,6 +39,7 @@ class AlbumsTableSeeder extends Seeder
         ]);
 
         DB::table('albums')->insert([
+            'user_id' => 1,
             'title' => 'Halvergate Marsh',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             'img' => 'img/landscape4.jpg',
@@ -44,6 +48,7 @@ class AlbumsTableSeeder extends Seeder
         ]);
 
         DB::table('albums')->insert([
+            'user_id' => 1,
             'title' => 'Rikkis Landscape',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             'img' => 'img/landscape5.jpg',
@@ -52,6 +57,7 @@ class AlbumsTableSeeder extends Seeder
         ]);
 
         DB::table('albums')->insert([
+            'user_id' => 1,
             'title' => 'Kiddi Kristjans Iceland',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             'img' => 'img/landscape6.jpg',

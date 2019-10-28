@@ -12,4 +12,13 @@ class UserController extends Controller
         return $users->toJson();
     }
 
+    public function show($id)
+    {
+      $users = User::with(['tasks' => function ($query) {
+        $query->where('name', 'Nick Reynolds');
+      }])->find($id);
+
+      return $users->toJson();
+    }
+
 }
