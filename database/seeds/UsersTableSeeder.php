@@ -17,7 +17,6 @@ class UsersTableSeeder extends Seeder
             'email' => 'nick.reynolds@domain',
             'bio' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
             'profile_picture' => 'img/profile.jpg',
-            'album_id' => 1
         ]);
     }
 }
