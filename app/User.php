@@ -37,4 +37,21 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
+
+
+    // public function photos()
+    // {
+    //     return $this->hasMany(Photo::class);
+    // }
+
+    protected $appends = array('album');
+
+    public function getAlbumAttribute()
+    {
+        return $this->hasMany(Photo::class)->get();
+    }
+
+
+
 }
