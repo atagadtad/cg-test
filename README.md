@@ -3,7 +3,7 @@
 
 ## Final Product
 
-!["Full Screen"](https://github.com/atagadtad/cg-test/blob/master/docs/Screen%20Shot%202019-10-29%20at%207.09.40%20PM%20(2).png?raw=true)
+!["Full Screen"](https://github.com/atagadtad/cg-test/blob/master/docs/Screen%20Shot%202019-10-29%20at%207.09.47%20PM%20(2).png?raw=true)
 !["Mid-length"](https://github.com/atagadtad/cg-test/blob/master/docs/Screen%20Shot%202019-10-29%20at%207.10.43%20PM%20(2).png?raw=true)
 !["Mobile View"](https://github.com/atagadtad/cg-test/blob/master/docs/Screen%20Shot%202019-10-29%20at%207.11.05%20PM%20(2).png?raw=true)
 
