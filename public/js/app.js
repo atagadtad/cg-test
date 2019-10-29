@@ -1838,7 +1838,7 @@ module.exports = {
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".app {\n  /* Set rules to fill background */\n  -webkit-filter: blur(1.5rem);\n          filter: blur(1.5rem);\n  min-height: 100%;\n  min-width: 1024px;\n\n  /* Set up proportionate scaling */\n  width: 100%;\n  height: auto;\n\n  /* Set up positioning */\n  position: fixed;\n  top: 0;\n  left: 0;\n  }\n\n.container {\n    display: -webkit-box;\n    display: flex;\n}\n\n", ""]);
+exports.push([module.i, ".app {\n  /* Set rules to fill background */\n  -webkit-filter: blur(1.5rem);\n          filter: blur(1.5rem);\n  min-height: 100%;\n  min-width: 1024px;\n\n  /* Set up proportionate scaling */\n  width: 100%;\n  height: auto;\n\n  /* Set up positioning */\n  position: fixed;\n  top: 0;\n  left: 0;\n  }\n\n.container {\n    display: -webkit-box;\n    display: flex;\n    /* align-content: center; */\n}\n\n/* .photo-container {\n    display: flex;\n    justify-content: center;\n} */\n\n/* .item {\n    align-self: auto;\n} */\n", ""]);
 
 
 /***/ }),
@@ -1852,7 +1852,7 @@ exports.push([module.i, ".app {\n  /* Set rules to fill background */\n  -webkit
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".card {\n    -webkit-filter: drop-shadow(0 0 0.75rem rgb(138, 135, 135));\n            filter: drop-shadow(0 0 0.75rem rgb(138, 135, 135));\n}\n\n#profile-pic {\n    width: 100px;\n    height: 100px;\n    border-radius: 50%;\n    -webkit-margin-before: 1em;\n            margin-block-start: 1em;\n    -webkit-margin-after: 1em;\n            margin-block-end: 1em;\n}\n", ""]);
+exports.push([module.i, ".card {\n    -webkit-filter: drop-shadow(0 0 0.75rem rgb(138, 135, 135));\n            filter: drop-shadow(0 0 0.75rem rgb(138, 135, 135));\n}\n\n#profile-pic {\n    width: 100px;\n    height: 100px;\n    border-radius: 50%;\n\n}\n\n#bio {\n    font-size: 12px;\n}\n", ""]);
 
 
 /***/ }),
@@ -51840,8 +51840,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./User */ "./resources/js/components/User.js");
-/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App.css */ "./resources/js/components/App.css");
-/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Photo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Photo */ "./resources/js/components/Photo.js");
+/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./App.css */ "./resources/js/components/App.css");
+/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_4__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -51849,6 +51850,7 @@ function _nonIterableRest() { throw new TypeError("Invalid attempt to destructur
 function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -51864,8 +51866,7 @@ function App(props) {
     axios.get('http://localhost:8000/api/users/1').then(function (res) {
       setUser(res.data);
     });
-  }, []); // console.log(user)
-
+  }, []);
   var imgUrl = "http://localhost:8000/storage/img/landscape1.jpeg";
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
     className: "container"
@@ -51874,15 +51875,46 @@ function App(props) {
     style: {
       backgroundImage: "url(".concat(imgUrl, ")")
     }
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_2__["default"], {
     name: user.name,
     email: user.email,
     bio: user.bio,
     profile_picture: user.profile_picture,
     phone_number: user.phone_number
-  }));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Photo__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
 }
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById("app"));
+
+/***/ }),
+
+/***/ "./resources/js/components/Photo.js":
+/*!******************************************!*\
+  !*** ./resources/js/components/Photo.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Photo; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function Photo(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row no-gutters"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-auto"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-block px-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Hello"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col"
+  })));
+}
 
 /***/ }),
 
@@ -51949,11 +51981,21 @@ function User(props) {
     className: "col"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-block px-2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
     className: "card-title"
-  }, props.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, props.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    className: "card-title"
+  }, "Bio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    id: "bio",
     className: "card-text"
-  }, props.bio)))));
+  }, props.bio))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "conact-info",
+    className: "col"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    className: "card-title"
+  }, "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    className: "card-title"
+  }, "Phone"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.phone_number))));
 }
 
 /***/ }),

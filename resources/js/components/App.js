@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
+
 import User from './User';
+import Photo from './Photo';
+
 import './App.css'
 
 
@@ -14,15 +17,30 @@ export default function App(props) {
         })
     }, [])
 
-    // console.log(user)
-
     let imgUrl = "http://localhost:8000/storage/img/landscape1.jpeg"
-    return (
 
+    return (
 
     <main className="container">
         <div className="app" style={{backgroundImage: `url(${imgUrl})`}}></div>
-        <User name={user.name} email={user.email} bio={user.bio} profile_picture={user.profile_picture} phone_number={user.phone_number}/>
+
+        <div>
+
+            <User
+            name={user.name}
+            email={user.email}
+            bio={user.bio}
+            profile_picture={user.profile_picture}
+            phone_number={user.phone_number}/>
+
+
+            <Photo />
+
+        </div>
+
+
+
+
 
     </main>
     )

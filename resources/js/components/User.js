@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './User.css'
 
 
@@ -16,12 +16,18 @@ export default function User(props) {
             </div>
             <div className="col">
                 <div className="card-block px-2">
-                    <h5 className="card-title">{props.name}</h5>
-
-                    <p className="card-text">{props.bio}</p>
+                    <h6 className="card-title">{props.name}</h6>
+                    <h6 className="card-title">Bio</h6>
+                    <p id="bio" className="card-text">{props.bio}</p>
 
                 </div>
 
+            </div>
+            <div id="conact-info" className="col">
+                <h6 className="card-title">Email</h6>
+                <p>{props.email}</p>
+                <h6 className="card-title">Phone</h6>
+                <p>{props.phone_number}</p>
             </div>
 
         </div>

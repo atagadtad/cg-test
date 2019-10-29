@@ -16,5 +16,14 @@
 
 .container {
     display: flex;
+    /* align-content: center; */
 }
 
+/* .photo-container {
+    display: flex;
+    justify-content: center;
+} */
+
+/* .item {
+    align-self: auto;
+} */
