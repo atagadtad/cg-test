@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Gallery from './Gallery'
+// import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import './App.css'
+
 
 export default function App(props) {
-    return (
-        <main>
-            <Gallery />
 
-        </main>
+    let imgUrl = "http://localhost:8000/storage/img/landscape1.jpeg"
+    return (
+        <>
+    <div className="app" style={{backgroundImage: `url(${imgUrl})`}}></div>
+    <h1>
+        HELLO
+    </h1>
+</>
     )
 }
 

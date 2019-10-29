@@ -2,8 +2,14 @@
 import axios from 'axios'
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import "./Home.css";
 
-export default function Gallery(props) {
+    // const background = {
+    //     backgroundImage: 'url(' + 'http://localhost:8000/storage/img/landscape1.jpeg' + ')',
+    //     // filter: 'blur(8px)',
+    // }
+
+export default function Home(props) {
 
     useEffect(() => {
         axios.get('http://localhost:8000/api/users/1')
@@ -13,11 +19,8 @@ export default function Gallery(props) {
     }, [])
 
     return (
-        <main>
 
-        <h1>
-            hello
-        </h1>
-        </main>
+    <div className="bg-image">HAI</div>
+
     )
 }
