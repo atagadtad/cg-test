@@ -17,6 +17,8 @@ export default function App(props) {
         })
     }, [])
 
+    // console.log(user.album)
+
 
 
     let imgUrl = "http://localhost:8000/storage/img/landscape1.jpeg"
@@ -33,9 +35,14 @@ export default function App(props) {
             email={user.email}
             bio={user.bio}
             profile_picture={user.profile_picture}
-            phone_number={user.phone_number}/>
+            phone_number={user.phone_number}
+            />
 
-            <Album album={user.album} />
+            {user.album ?
+                <Album
+                album={user.album}
+                />
+            : null}
         </div>
 
 

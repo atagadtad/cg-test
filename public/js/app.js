@@ -51804,12 +51804,42 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Photo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Album; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _AlbumListItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AlbumListItem */ "./resources/js/components/AlbumListItem.js");
+
+
+function Album(props) {
+  var album = props.album.map(function (photo) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AlbumListItem__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      title: photo.title,
+      img: photo.img,
+      description: photo.description,
+      featured: photo.featured,
+      date: photo.date
+    });
+  });
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "hai");
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/AlbumListItem.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/AlbumListItem.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AlbumListItem; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
-function Photo(props) {
-  console.log("props in Album.js: ", props);
+function AlbumListItem(props) {
+  console.log("props from AlbumList: ", props);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "hai");
 }
 
@@ -51886,7 +51916,8 @@ function App(props) {
     axios.get('http://localhost:8000/api/users/1').then(function (res) {
       setUser(res.data);
     });
-  }, []);
+  }, []); // console.log(user.album)
+
   var imgUrl = "http://localhost:8000/storage/img/landscape1.jpeg";
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
     className: "container"
@@ -51901,9 +51932,9 @@ function App(props) {
     bio: user.bio,
     profile_picture: user.profile_picture,
     phone_number: user.phone_number
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Album__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), user.album ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Album__WEBPACK_IMPORTED_MODULE_3__["default"], {
     album: user.album
-  })));
+  }) : null));
 }
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById("app"));
 
