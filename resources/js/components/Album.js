@@ -16,5 +16,5 @@ export default function Album(props) {
                 />
             )
         })
-    return <ul>{album}</ul>
+    return <div>{album}</div>
 }

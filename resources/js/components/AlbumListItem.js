@@ -7,20 +7,23 @@ export default function AlbumListItem(props) {
     return (
         <li>
 
-            <div className="card bg-light text-white">
+            <div className="card bg-dark text-white">
 
                 <img className="card-img-top" src={props.img} alt="Card image cap"/>
                 <div className="card-img-overlay">
                     <h5 className="card-title">{props.title}</h5>
                 </div>
 
-                <div className="card-body">
+                <div className="card-body .bg-light">
 
                     <p className="card-text">{props.description}</p>
+                    <p class="card-text"><small class="text-muted">{props.date}</small></p>
+                    <img src="/open-iconic/svg/icon-name.svg" alt="icon name"/>
+
 
                 </div>
-
             </div>
+
 
         </li>
     )

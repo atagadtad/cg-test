@@ -1852,7 +1852,7 @@ exports.push([module.i, ".app {\n  /* Set rules to fill background */\n  -webkit
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".card {\n    -webkit-filter: drop-shadow(0 0 0.75rem rgb(138, 135, 135));\n            filter: drop-shadow(0 0 0.75rem rgb(138, 135, 135));\n}\n\n#profile-pic {\n    width: 100px;\n    height: 100px;\n    border-radius: 50%;\n\n}\n\n#bio {\n    font-size: 12px;\n}\n", ""]);
+exports.push([module.i, ".card {\n    /* filter: drop-shadow(0 0 0.75rem rgb(138, 135, 135)); */\n}\n\n#profile-pic {\n    width: 100px;\n    height: 100px;\n    border-radius: 50%;\n\n}\n\n#bio {\n    font-size: 12px;\n}\n", ""]);
 
 
 /***/ }),
@@ -51820,7 +51820,7 @@ function Album(props) {
       date: photo.date
     });
   });
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, album);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, album);
 }
 
 /***/ }),
@@ -51851,10 +51851,17 @@ function AlbumListItem(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
     className: "card-title"
   }, props.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-body"
+    className: "card-body .bg-light"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "card-text"
-  }, props.description))));
+  }, props.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    "class": "card-text"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
+    "class": "text-muted"
+  }, props.date)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "/open-iconic/svg/icon-name.svg",
+    alt: "icon name"
+  }))));
 } // <div class="card bg-primary text-white text-center p-3">
 // <blockquote class="blockquote mb-0">
 //   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
