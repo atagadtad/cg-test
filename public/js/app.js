@@ -1852,7 +1852,7 @@ exports.push([module.i, ".app {\n  /* Set rules to fill background */\n  -webkit
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".card {\n    -webkit-filter: drop-shadow(0 0 0.75rem rgb(138, 135, 135));\n            filter: drop-shadow(0 0 0.75rem rgb(138, 135, 135));\n}\n", ""]);
+exports.push([module.i, ".card {\n    -webkit-filter: drop-shadow(0 0 0.75rem rgb(138, 135, 135));\n            filter: drop-shadow(0 0 0.75rem rgb(138, 135, 135));\n}\n\n#profile-pic {\n    width: 100px;\n    height: 100px;\n    border-radius: 50%;\n    -webkit-margin-before: 1em;\n            margin-block-start: 1em;\n    -webkit-margin-after: 1em;\n            margin-block-end: 1em;\n}\n", ""]);
 
 
 /***/ }),
@@ -51864,8 +51864,8 @@ function App(props) {
     axios.get('http://localhost:8000/api/users/1').then(function (res) {
       setUser(res.data);
     });
-  }, []);
-  console.log(user);
+  }, []); // console.log(user)
+
   var imgUrl = "http://localhost:8000/storage/img/landscape1.jpeg";
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
     className: "container"
@@ -51875,7 +51875,11 @@ function App(props) {
       backgroundImage: "url(".concat(imgUrl, ")")
     }
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    name: user.name
+    name: user.name,
+    email: user.email,
+    bio: user.bio,
+    profile_picture: user.profile_picture,
+    phone_number: user.phone_number
   }));
 }
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById("app"));
@@ -51933,8 +51937,23 @@ function User(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-body"
-  }, props.name));
+    className: "row no-gutters"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-auto"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    id: "profile-pic",
+    className: "img-fluid",
+    src: props.profile_picture,
+    alt: "Card image cap"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-block px-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "card-title"
+  }, props.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "card-text"
+  }, props.bio)))));
 }
 
 /***/ }),

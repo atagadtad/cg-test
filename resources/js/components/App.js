@@ -14,7 +14,7 @@ export default function App(props) {
         })
     }, [])
 
-    console.log(user)
+    // console.log(user)
 
     let imgUrl = "http://localhost:8000/storage/img/landscape1.jpeg"
     return (
