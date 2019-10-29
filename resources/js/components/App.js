@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 import User from './User';
-import Photo from './Photo';
+import Album from './Album';
 
 import './App.css'
 
@@ -16,6 +16,8 @@ export default function App(props) {
             setUser(res.data)
         })
     }, [])
+
+
 
     let imgUrl = "http://localhost:8000/storage/img/landscape1.jpeg"
 
@@ -33,9 +35,7 @@ export default function App(props) {
             profile_picture={user.profile_picture}
             phone_number={user.phone_number}/>
 
-
-            <Photo />
-
+            <Album album={user.album} />
         </div>
 
 

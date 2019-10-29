@@ -5,7 +5,7 @@ import './User.css'
 
 export default function User(props) {
 
-    console.log("props: ", props)
+    // console.log("props: ", props)
 
     return (
 
