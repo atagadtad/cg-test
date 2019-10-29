@@ -23,12 +23,16 @@ export default function User(props) {
                     </div>
 
                 </div>
-                <div  className="container-item">
+                <div className="container-item" id='contact'>
+                    <div>
                     <h6 className="card-title text-muted contact-title">Email</h6>
                     <p className="contact-info">{props.email}</p>
+                    </div>
 
+                    <div>
                     <h6 className="card-title text-muted contact-title">Phone</h6>
                     <p className="contact-info">{props.phone_number}</p>
+                    </div>
                 </div>
 
             </div>

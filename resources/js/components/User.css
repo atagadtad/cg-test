@@ -48,8 +48,26 @@
     flex-direction: column;
 }
 
-.card-title {
+@media only screen and (max-width: 500px) {
+    .container {
+        flex-direction: column;
+    }
+    #contact {
+        margin-top: 15px;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: row;
+    }
 
+
+
+    #profile-pic{
+        margin: 0 auto;
+    }
+
+    #user-name {
+        font-size: 15px;
+        text-align: center;
+    }
 }
-
 
