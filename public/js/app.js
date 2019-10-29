@@ -51820,7 +51820,7 @@ function Album(props) {
       date: photo.date
     });
   });
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "hai");
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, album);
 }
 
 /***/ }),
@@ -51840,8 +51840,31 @@ __webpack_require__.r(__webpack_exports__);
 
 function AlbumListItem(props) {
   console.log("props from AlbumList: ", props);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "hai");
-}
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card bg-dark text-white"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "card-img-top",
+    src: props.img,
+    alt: "Card image cap"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-img-overlay"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+    className: "card-title"
+  }, props.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-body"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "card-text"
+  }, props.description))));
+} // <div class="card bg-primary text-white text-center p-3">
+// <blockquote class="blockquote mb-0">
+//   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+//   <footer class="blockquote-footer">
+//     <small>
+//       Someone famous in <cite title="Source Title">Source Title</cite>
+//     </small>
+//   </footer>
+// </blockquote>
+// </div>
 
 /***/ }),
 

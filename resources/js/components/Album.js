@@ -16,13 +16,5 @@ export default function Album(props) {
                 />
             )
         })
-
-
-
-
-    return (
-        <div>
-            hai
-        </div>
-    )
+    return <ul>{album}</ul>
 }
