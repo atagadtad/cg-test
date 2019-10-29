@@ -27,7 +27,7 @@ export default function App(props) {
     <main className="container">
         <div className="app" style={{backgroundImage: `url(${imgUrl})`}}></div>
 
-        <div>
+        <div id="max-width">
 
             <User
             name={user.name}
