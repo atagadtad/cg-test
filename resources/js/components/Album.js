@@ -1,6 +1,7 @@
 import React from 'react'
 
 import AlbumListItem from './AlbumListItem';
+import './Album.css';
 
 export default function Album(props) {
 
@@ -16,5 +17,5 @@ export default function Album(props) {
                 />
             )
         })
-    return <div>{album}</div>
+    return <div className="album">{album}</div>
 }

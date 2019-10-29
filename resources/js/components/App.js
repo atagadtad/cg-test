@@ -43,12 +43,8 @@ export default function App(props) {
                 album={user.album}
                 />
             : null}
+
         </div>
-
-
-
-
-
     </main>
     )
 }

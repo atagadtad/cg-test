@@ -1,11 +1,13 @@
 import React from 'react'
 
+import './AlbumListItem.css'
+
 export default function AlbumListItem(props) {
 
     console.log("props from AlbumList: ", props)
 
     return (
-        <li>
+        <div className="albumlist-item">
 
             <div className="card bg-dark text-white">
 
@@ -14,7 +16,7 @@ export default function AlbumListItem(props) {
                     <h5 className="card-title">{props.title}</h5>
                 </div>
 
-                <div className="card-body .bg-light">
+                <div className="card-body">
 
                     <p className="card-text">{props.description}</p>
                     <p class="card-text"><small class="text-muted">{props.date}</small></p>
@@ -25,7 +27,7 @@ export default function AlbumListItem(props) {
             </div>
 
 
-        </li>
+        </div>
     )
 }
 
