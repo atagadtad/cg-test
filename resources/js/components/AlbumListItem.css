@@ -1,6 +1,7 @@
 .albumlist-item {
     width: 32%;
     margin: 0;
+    padding-top: 25px;
 }
 
 #photo-description {
@@ -9,12 +10,13 @@
 
 #photo-title {
     position: absolute;
-    bottom: 120px;
+    bottom: 90px;
 }
 
 #date {
     font-size: 10px;
 }
+
 
 .card-body {
     padding: 0.7rem;

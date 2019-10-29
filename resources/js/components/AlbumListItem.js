@@ -5,7 +5,6 @@ import Octicon, { Heart, PrimitiveDot, PrimitiveDotStroke } from '@primer/octico
 
 export default function AlbumListItem(props) {
 
-    console.log("props from AlbumList: ", props)
 
     return (
         <div className="albumlist-item">
@@ -18,13 +17,13 @@ export default function AlbumListItem(props) {
                     <h6 id="photo-title" className="card-title">{props.title}</h6>
                 </div>
 
-                <div className="card-body">
+                <div id="card-bottom" className="card-body">
 
                         <p id="photo-description" className="card-text container-item">{props.description}</p>
 
                     <div className="date-liked-container">
-                        <p className="card-text container-item"><small id="date" className="text-muted">{props.date}</small></p>
                         {props.featured === 1 ?  <Octicon icon={Heart}/> : <Octicon icon={PrimitiveDotStroke} size="small"/>}
+                        <p className="card-text container-item"><small id="date" className="text-muted">{props.date}</small></p>
                     </div>
 
                 </div>

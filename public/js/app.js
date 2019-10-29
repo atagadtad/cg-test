@@ -3328,7 +3328,7 @@ exports.push([module.i, ".album {\n    width: 100%;\n    display: -webkit-box;\n
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".albumlist-item {\n    width: 32%;\n    margin: 0;\n}\n\n#photo-description {\n    font-size: 11px;\n}\n\n#photo-title {\n    position: absolute;\n    bottom: 120px;\n}\n\n#date {\n    font-size: 10px;\n}\n\n.card-body {\n    padding: 0.7rem;\n}\n\n.container {\n    display: -webkit-box;\n    display: flex;\n    padding: 20px 0 20px 0;\n    width: 90%;\n    margin: 0 auto;\n}\n\n.container-item {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n            flex-direction: column;\n}\n\n.date-liked-container {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n@media only screen and (max-width: 845px) {\n    .albumlist-item {\n        width: 47%;\n    }\n}\n\n@media only screen and (max-width: 480px) {\n    .albumlist-item {\n        width: 100%;\n    }\n}\n\n", ""]);
+exports.push([module.i, ".albumlist-item {\n    width: 32%;\n    margin: 0;\n    padding-top: 25px;\n}\n\n#photo-description {\n    font-size: 11px;\n}\n\n#photo-title {\n    position: absolute;\n    bottom: 90px;\n}\n\n#date {\n    font-size: 10px;\n}\n\n\n.card-body {\n    padding: 0.7rem;\n}\n\n.container {\n    display: -webkit-box;\n    display: flex;\n    padding: 20px 0 20px 0;\n    width: 90%;\n    margin: 0 auto;\n}\n\n.container-item {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n            flex-direction: column;\n}\n\n.date-liked-container {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n}\n\n@media only screen and (max-width: 845px) {\n    .albumlist-item {\n        width: 47%;\n    }\n}\n\n@media only screen and (max-width: 480px) {\n    .albumlist-item {\n        width: 100%;\n    }\n}\n\n", ""]);
 
 
 /***/ }),
@@ -3356,7 +3356,7 @@ exports.push([module.i, ".app {\n  /* Set rules to fill background */\n  -webkit
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "#profile-pic {\n    width: 100px;\n    height: 100px;\n    border-radius: 50%;\n    margin-right: 10px;\n\n}\n\n#bio {\n    font-size: 12px;\n}\n\n.contact-info {\n    font-size: 10px;\n    color: rgb(255, 108, 108);\n}\n\n#user-card {\n    display: -webkit-box;\n    display: flex;\n    flex-wrap: wrap;\n}\n\n.container {\n    display: -webkit-box;\n    display: flex;\n    padding: 20px 0 20px 0;\n    width: 90%;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n    margin: 0 auto;\n}\n\n.container-item {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n            flex-direction: column;\n}\n\n.card-title {\n    margin-bottom: 0;\n}\n\n\n", ""]);
+exports.push([module.i, "#profile-pic {\n    width: 100px;\n    height: 100px;\n    border-radius: 50%;\n    margin-right: 10px;\n\n}\n\n#user-name {\n    font-size: 15px;\n}\n\n#bio {\n    font-size: 12px;\n}\n\n#bio-title {\n    font-size: 12;\n    margin-bottom: 0.25px;\n}\n\n.contact-info {\n    font-size: 10px;\n    color: rgb(255, 108, 108);\n}\n\n.contact-title {\n    margin-bottom: 0.5;\n    font-size: 10px;\n    margin-bottom: 0.25px;\n}\n\n#user-card {\n    display: -webkit-box;\n    display: flex;\n    flex-wrap: wrap;\n}\n\n.container {\n    display: -webkit-box;\n    display: flex;\n    padding: 20px 0 20px 0;\n    width: 90%;\n    -webkit-box-pack: justify;\n            justify-content: space-between;\n    margin: 0 auto;\n}\n\n.container-item {\n    display: -webkit-box;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n            flex-direction: column;\n}\n\n.card-title {\n\n}\n\n\n", ""]);
 
 
 /***/ }),
@@ -54322,23 +54322,24 @@ function AlbumListItem(props) {
     id: "photo-title",
     className: "card-title"
   }, props.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "card-bottom",
     className: "card-body"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     id: "photo-description",
     className: "card-text container-item"
   }, props.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "date-liked-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "card-text container-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
-    id: "date",
-    className: "text-muted"
-  }, props.date)), props.featured === 1 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_primer_octicons_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, props.featured === 1 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_primer_octicons_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
     icon: _primer_octicons_react__WEBPACK_IMPORTED_MODULE_2__["Heart"]
   }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_primer_octicons_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
     icon: _primer_octicons_react__WEBPACK_IMPORTED_MODULE_2__["PrimitiveDotStroke"],
     size: "small"
-  })))));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "card-text container-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", {
+    id: "date",
+    className: "text-muted"
+  }, props.date))))));
 }
 
 /***/ }),
@@ -54504,20 +54505,22 @@ function User(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-block px-2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    id: "user-name",
     className: "card-title"
   }, props.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
+    id: "bio-title",
     className: "card-title text-muted"
   }, "Bio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     id: "bio",
     className: "card-text"
   }, props.bio))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container-item contact-title"
+    className: "container-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
-    className: "card-title text-muted"
+    className: "card-title text-muted contact-title"
   }, "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "contact-info"
   }, props.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
-    className: "card-title text-muted"
+    className: "card-title text-muted contact-title"
   }, "Phone"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "contact-info"
   }, props.phone_number)))));

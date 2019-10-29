@@ -6,8 +6,6 @@ import Octicon from '@primer/octicons-react'
 
 export default function User(props) {
 
-    console.log("props: ", props)
-
     return (
 
     <div id="user-card" className="card">
@@ -18,18 +16,18 @@ export default function User(props) {
                 </div>
                 <div className="container-item">
                     <div className="card-block px-2">
-                        <h6 className="card-title">{props.name}</h6>
-                        <h6 className="card-title text-muted">Bio</h6>
+                        <h6 id="user-name" className="card-title">{props.name}</h6>
+                        <h6 id="bio-title" className="card-title text-muted">Bio</h6>
                         <p id="bio" className="card-text">{props.bio}</p>
 
                     </div>
 
                 </div>
-                <div  className="container-item contact-title">
-                    <h6 className="card-title text-muted">Email</h6>
+                <div  className="container-item">
+                    <h6 className="card-title text-muted contact-title">Email</h6>
                     <p className="contact-info">{props.email}</p>
 
-                    <h6 className="card-title text-muted">Phone</h6>
+                    <h6 className="card-title text-muted contact-title">Phone</h6>
                     <p className="contact-info">{props.phone_number}</p>
                 </div>
 

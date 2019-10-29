@@ -6,13 +6,28 @@
 
 }
 
+#user-name {
+    font-size: 15px;
+}
+
 #bio {
     font-size: 12px;
+}
+
+#bio-title {
+    font-size: 12;
+    margin-bottom: 0.25px;
 }
 
 .contact-info {
     font-size: 10px;
     color: rgb(255, 108, 108);
+}
+
+.contact-title {
+    margin-bottom: 0.5;
+    font-size: 10px;
+    margin-bottom: 0.25px;
 }
 
 #user-card {
@@ -34,7 +49,7 @@
 }
 
 .card-title {
-    margin-bottom: 0;
+
 }
 
 
