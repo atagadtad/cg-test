@@ -23,7 +23,9 @@
         "sass-loader": "^7.1.0"
     },
     "dependencies": {
+        "@primer/octicons-react": "^9.2.0",
         "bootstrap": "^4.3.1",
+        "octicons": "^8.5.0",
         "react-router-dom": "^5.1.2"
     }
 }

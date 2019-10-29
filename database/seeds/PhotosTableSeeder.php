@@ -44,7 +44,7 @@ class PhotosTableSeeder extends Seeder
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             'img' => 'http://localhost:8000/storage/img/landscape4.jpeg',
             'date' => '2014-04-01',
-            'featured' => false
+            'featured' => true
         ]);
 
         DB::table('photos')->insert([

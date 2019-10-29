@@ -4,9 +4,14 @@
   min-height: 100%;
   min-width: 1024px;
 
+  background-repeat: no-repeat;
+  background-size: cover;
+
   /* Set up proportionate scaling */
   width: 100%;
   height: auto;
+  background-position: center;
+
 
   /* Set up positioning */
   position: fixed;
@@ -17,14 +22,5 @@
 .container {
     display: flex;
     justify-content: center;
-    /* align-content: center; */
 }
 
-/* .photo-container {
-    display: flex;
-    justify-content: center;
-} */
-
-/* .item {
-    align-self: auto;
-} */

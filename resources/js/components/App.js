@@ -17,11 +17,10 @@ export default function App(props) {
         })
     }, [])
 
-    // console.log(user.album)
 
 
 
-    let imgUrl = "http://localhost:8000/storage/img/landscape1.jpeg"
+    let imgUrl = "http://localhost:8000/storage/img/landscape6.jpeg"
 
     return (
 

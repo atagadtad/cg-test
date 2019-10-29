@@ -1,6 +1,7 @@
 import React from 'react'
 
 import './AlbumListItem.css'
+import Octicon, { Heart, PrimitiveDot, PrimitiveDotStroke } from '@primer/octicons-react'
 
 export default function AlbumListItem(props) {
 
@@ -12,33 +13,22 @@ export default function AlbumListItem(props) {
             <div className="card bg-dark text-white">
 
                 <img className="card-img-top" src={props.img} alt="Card image cap"/>
+
                 <div className="card-img-overlay">
-                    <h5 className="card-title">{props.title}</h5>
+                    <h6 id="photo-title" className="card-title">{props.title}</h6>
                 </div>
 
                 <div className="card-body">
 
-                    <p className="card-text">{props.description}</p>
-                    <p class="card-text"><small class="text-muted">{props.date}</small></p>
-                    <img src="/open-iconic/svg/icon-name.svg" alt="icon name"/>
+                        <p id="photo-description" className="card-text container-item">{props.description}</p>
 
+                    <div className="date-liked-container">
+                        <p className="card-text container-item"><small id="date" className="text-muted">{props.date}</small></p>
+                        {props.featured === 1 ?  <Octicon icon={Heart}/> : <Octicon icon={PrimitiveDotStroke} size="small"/>}
+                    </div>
 
                 </div>
             </div>
-
-
         </div>
     )
 }
-
-
-// <div class="card bg-primary text-white text-center p-3">
-// <blockquote class="blockquote mb-0">
-//   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-//   <footer class="blockquote-footer">
-//     <small>
-//       Someone famous in <cite title="Source Title">Source Title</cite>
-//     </small>
-//   </footer>
-// </blockquote>
-// </div>

@@ -1,4 +1,51 @@
 .albumlist-item {
-    width: 30%;
+    width: 32%;
     margin: 0;
 }
+
+#photo-description {
+    font-size: 11px;
+}
+
+#photo-title {
+    position: absolute;
+    bottom: 120px;
+}
+
+#date {
+    font-size: 10px;
+}
+
+.card-body {
+    padding: 0.7rem;
+}
+
+.container {
+    display: flex;
+    padding: 20px 0 20px 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-liked-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 845px) {
+    .albumlist-item {
+        width: 47%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .albumlist-item {
+        width: 100%;
+    }
+}
+
